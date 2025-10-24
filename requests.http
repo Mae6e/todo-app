@@ -1,0 +1,23 @@
+
+### signup
+POST  http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email":"maedehzebhi2@gmail.com",
+  "password": "thisispass"
+}
+
+
+### signin
+POST  http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email":"maedehzebhi@gmail.com",
+  "password": "thisispass"
+}
+
+### test jwt 
+GET  http://localhost:3000/auth/testJwt
+Authorization: Bearer mytoken
