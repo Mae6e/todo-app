@@ -1,6 +1,6 @@
 #####################################* Authentication *#####################################
 ### signup
-POST  http://localhost:3000/auth/signup
+POST  http://localhost:3000/api/v1/auth/signup
 Content-Type: application/json
 
 {
@@ -10,7 +10,7 @@ Content-Type: application/json
 
 
 ### signin
-POST  http://localhost:3000/auth/signin
+POST  http://localhost:3000/api/v1/auth/signin
 Content-Type: application/json
 
 {
@@ -19,13 +19,13 @@ Content-Type: application/json
 }
 
 ### test jwt 
-GET  http://localhost:3000/auth/testJwt
+GET  http://localhost:3000/api/v1/auth/testJwt
 Authorization: Bearer mytoken
 
 
 ########################################* Task *###########################################
 ### create task
-POST  http://localhost:3000/tasks
+POST  http://localhost:3000/api/v1/tasks
 Content-Type: application/json
 Authorization: Bearer mytoken
 
@@ -35,11 +35,11 @@ Authorization: Bearer mytoken
 }
 
 ### findAll task
-GET   http://localhost:3000/tasks/?page=2&limit=5
+GET   http://localhost:3000/api/v1/tasks/?page=2&limit=5
 Authorization: Bearer mytoken
 
 ### update task
-PATCH   http://localhost:3000/tasks/68fb54b37f491d021c86d8ba
+PATCH   http://localhost:3000/api/v1/tasks/68fb54b37f491d021c86d8ba
 Authorization: Bearer mytoken
 Content-Type: application/json
 
@@ -51,11 +51,11 @@ Content-Type: application/json
 
 
 ### delete task
-DELETE   http://localhost:3000/tasks/68fb54b37f491d021c86d8ba
+DELETE   http://localhost:3000/api/v1/tasks/68fb54b37f491d021c86d8ba
 Authorization: Bearer mytoken
 
 
 ### find task
-GET   http://localhost:3000/tasks/68fb544cdfd5e98a2f9a14a4
+GET   http://localhost:3000/api/v1/tasks/68fb544cdfd5e98a2f9a14a4
 Authorization: Bearer mytoken
 
