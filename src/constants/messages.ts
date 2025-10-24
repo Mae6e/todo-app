@@ -5,10 +5,13 @@ export const RESPONSE_MESSAGES = {
     INVALID_CREDENTIALS: 'Invalid email or password.',
     EMAIL_EXISTS: 'Email already exists.',
   },
-  TODO: {
-    CREATED: 'Todo created successfully.',
-    UPDATED: 'Todo updated successfully.',
-    DELETED: 'Todo deleted successfully.',
+  TASK: {
+    CREATED: 'Task created successfully',
+    FETCHED: 'Tasks fetched successfully',
+    FETCHED_ONE: 'Task fetched successfully',
+    UPDATED: 'Task updated successfully',
+    DELETED: 'Task deleted successfully',
+    NOT_FOUND: 'Task not found',
   },
   ERROR: {
     NOT_FOUND: 'Resource not found.',

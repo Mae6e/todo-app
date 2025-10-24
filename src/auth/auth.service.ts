@@ -24,7 +24,7 @@ export class AuthService {
       throw new UnauthorizedException(RESPONSE_MESSAGES.AUTH.EMAIL_EXISTS);
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = await this.userModel.create({
+    await this.userModel.create({
       email,
       password: hashedPassword,
     });

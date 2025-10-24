@@ -1,4 +1,4 @@
-
+#####################################* Authentication *#####################################
 ### signup
 POST  http://localhost:3000/auth/signup
 Content-Type: application/json
@@ -21,3 +21,41 @@ Content-Type: application/json
 ### test jwt 
 GET  http://localhost:3000/auth/testJwt
 Authorization: Bearer mytoken
+
+
+########################################* Task *###########################################
+### create task
+POST  http://localhost:3000/tasks
+Content-Type: application/json
+Authorization: Bearer mytoken
+
+{
+  "title":"homework",
+  "description": "write my homework"
+}
+
+### findAll task
+GET   http://localhost:3000/tasks/?page=2&limit=5
+Authorization: Bearer mytoken
+
+### update task
+PATCH   http://localhost:3000/tasks/68fb54b37f491d021c86d8ba
+Authorization: Bearer mytoken
+Content-Type: application/json
+
+{
+  "title":"homework",
+  "status": "done",
+  "description": "write my homework, review that"
+}
+
+
+### delete task
+DELETE   http://localhost:3000/tasks/68fb54b37f491d021c86d8ba
+Authorization: Bearer mytoken
+
+
+### find task
+GET   http://localhost:3000/tasks/68fb544cdfd5e98a2f9a14a4
+Authorization: Bearer mytoken
+
